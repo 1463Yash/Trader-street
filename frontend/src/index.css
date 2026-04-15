@@ -1,0 +1,48 @@
+/* ── Light theme (default) ── */
+:root {
+  --bg:           #f8fafc;
+  --bg-nav:       #ffffff;
+  --bg-card:      #ffffff;
+  --bg-btn:       #f1f5f9;
+  --bg-input:     #f8fafc;
+  --border:       #e2e8f0;
+  --text:         #1e293b;
+  --text-muted:   #64748b;
+  --text-btn:     #475569;
+  --shadow-nav:   0 1px 0 #e2e8f0;
+  --shadow-card:  0 4px 16px rgba(0,0,0,0.07);
+  --skeleton-1:   #e4e4f7;
+  --skeleton-2:   #d4d4f5;
+}
+
+/* ── Dark theme ── */
+[data-theme="dark"] {
+  --bg:           #0f172a;
+  --bg-nav:       #1e293b;
+  --bg-card:      #1e293b;
+  --bg-btn:       #334155;
+  --bg-input:     #1e293b;
+  --border:       #334155;
+  --text:         #f1f5f9;
+  --text-muted:   #94a3b8;
+  --text-btn:     #cbd5e1;
+  --shadow-nav:   0 1px 0 #334155;
+  --shadow-card:  0 4px 16px rgba(0,0,0,0.3);
+  --skeleton-1:   #334155;
+  --skeleton-2:   #475569;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #38bdf8 var(--bg);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}

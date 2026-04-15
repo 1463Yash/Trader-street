@@ -1,0 +1,27 @@
+# Environment variables — NEVER commit these
+.env
+backend/.env
+frontend/.env
+
+# Dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# ML model files (large binaries)
+ML_model/**/*.h5
+ML_model/**/*.pkl
+
+# Build output
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,118 @@
+.dm-section {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dm-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: var(--bg-btn);
+  color: var(--text);
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.dm-header:hover { background: var(--border); }
+
+.dm-chevron {
+  transition: transform 0.2s;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.dm-chevron--open { transform: rotate(180deg); }
+
+.dm-body {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  padding: 6px 0;
+}
+
+.dm-empty {
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* Watchlist items */
+.dm-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 14px;
+  transition: background 0.1s;
+}
+
+.dm-item:hover { background: var(--bg-btn); }
+
+.dm-item__sym {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  flex: 1;
+}
+
+.dm-item__sym:hover { color: #38bdf8; }
+
+.dm-item__remove {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 13px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.dm-item__remove:hover { color: #f43f5e; }
+
+/* ML model buttons */
+.dm-model-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 14px;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s;
+}
+
+.dm-model-btn:hover {
+  background: var(--bg-btn);
+  color: #38bdf8;
+}
+
+.dm-lock { color: var(--text-muted); }
+
+.dm-model-btn--locked {
+  color: var(--text-muted);
+  opacity: 0.6;
+  gap: 6px;
+}
+
+.dm-login-hint {
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  color: #38bdf8;
+  cursor: pointer;
+  font-weight: 600;
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
+}
+
+.dm-login-hint:hover { text-decoration: underline; }

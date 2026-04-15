@@ -1,0 +1,15 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #38bdf8 var(--bg);
+}
+
+body {
+  background-color: var(--bg);
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}

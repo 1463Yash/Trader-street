@@ -1,0 +1,48 @@
+.heading {
+  background: #e6ebf5;
+  border: none;
+  padding: 10px 5%;
+  border-radius: 25px;
+  font-size: 16px;
+  color: #4a5a75;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.heading:hover {
+  background-color: #38bdf8;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.heading:active {
+  transform: scale(0.96);
+}
+
+/* ── Prediction overlay ── */
+.pred-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pred-modal {
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 28px 32px;
+  width: min(700px, 92vw);
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  position: relative;
+}
+
+.pred-close { color: var(--text-muted); }
+.pred-close:hover { color: var(--text); }
+.pred-header h2 { font-size: 1.4rem; color: var(--text); margin-bottom: 6px; }
+.pred-loading, .pred-error { text-align: center; padding: 40px; color: var(--text-muted); font-size: 1rem; }

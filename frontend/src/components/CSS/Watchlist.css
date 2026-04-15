@@ -1,0 +1,128 @@
+/* ── Watchlist button ── */
+.watchlist-container {
+  position: relative;
+}
+
+.watchlist-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 9px 16px;
+  background-color: var(--bg-btn);
+  color: var(--text-btn);
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.watchlist-btn svg { width: 15px; height: 15px; transition: transform 0.2s; }
+.watchlist-btn:hover { background-color: #e0f2fe; color: #0284c7; }
+.watchlist-btn:hover svg { transform: rotate(180deg); }
+.watchlist-btn:active { opacity: 0.85; }
+.watchlist-btn--active { background-color: #0ea5e9; color: #fff; }
+.watchlist-btn--active:hover { background-color: #0284c7; color: #fff; }
+
+[data-theme="dark"] .watchlist-btn:hover { background-color: #1e3a5f; color: #38bdf8; }
+
+/* ── Dropdown ── */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  min-width: 160px;
+  padding: 6px 0;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border);
+  z-index: 1100;
+}
+
+.watchlist-container:hover .dropdown { display: block; }
+
+.dropdown p {
+  margin: 0;
+  padding: 10px 16px;
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.dropdown p:hover { background-color: var(--bg-btn); color: #38bdf8; }
+
+/* ── Watchlist items ── */
+.watchlist-dropdown {
+  min-width: 210px;
+  max-height: 280px;
+  overflow-y: auto;
+  padding: 6px 0;
+}
+
+.watchlist-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  gap: 8px;
+}
+
+.watchlist-item:hover { background: var(--bg-btn); }
+.watchlist-sym { font-weight: 600; font-size: 0.88rem; color: var(--text); cursor: pointer; flex: 1; }
+.watchlist-sym:hover { color: #38bdf8; }
+.watchlist-empty { padding: 14px 16px; color: var(--text-muted); font-size: 0.85rem; text-align: center; }
+
+/* ── Chart watchlist buttons ── */
+.chart-card__watchlist {
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid #38bdf8;
+  background: none;
+  color: #38bdf8;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.chart-card__watchlist:hover { background: #38bdf8; color: #fff; }
+
+.chart-card__watchlist--added {
+  background: #38bdf8;
+  color: #fff;
+  cursor: default;
+}
+
+.chart-card__watchlist--locked {
+  border-color: #cbd5e1;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* ── Back to ML button ── */
+.back-ml-btn {
+  background-color: #eff6ff;
+  color: #3b82f6;
+}
+
+.back-ml-btn:hover {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.watchlist-remove {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 13px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  line-height: 1;
+}
+.watchlist-remove:hover { color: #dc2626; background: rgba(220,38,38,0.08); }

@@ -1,0 +1,45 @@
+.market-vlogs-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 9px 16px;
+  background-color: var(--bg-btn);
+  color: var(--text-btn);
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.market-vlogs-btn:hover {
+  background-color: #38bdf8;
+  color: #fff;
+}
+
+.vlogs-sidebar {
+  position: fixed;
+  top: 0;
+  left: -420px;
+  width: 400px;
+  height: 100vh;
+  background-color: var(--bg-nav);
+  box-shadow: 4px 0 20px rgba(0,0,0,0.2);
+  transition: left 0.3s ease, background-color 0.3s;
+  z-index: 2000;   /* above drawer (1500) and nav (1000) */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.vlogs-sidebar.open { left: 0; }
+
+/* Mobile — full width */
+@media (max-width: 900px) {
+  .vlogs-sidebar {
+    width: 100vw;
+    left: -100vw;
+  }
+  .vlogs-sidebar.open { left: 0; }
+}
